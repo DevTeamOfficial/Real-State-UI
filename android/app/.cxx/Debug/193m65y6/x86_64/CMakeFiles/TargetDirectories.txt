@@ -1,0 +1,2 @@
+C:/Users/Admin/OneDrive/Desktop/git/Real-State-UI-1/android/app/.cxx/Debug/193m65y6/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Admin/OneDrive/Desktop/git/Real-State-UI-1/android/app/.cxx/Debug/193m65y6/x86_64/CMakeFiles/rebuild_cache.dir

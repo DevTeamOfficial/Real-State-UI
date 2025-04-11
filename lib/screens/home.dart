@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
                       //   AppBar
                       Container(
                         width: 45,
-                        height: 45,
+                        height: 25,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: theme.primaryColor,
@@ -41,36 +41,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const Spacer(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Current location",
-                            style: theme.textTheme.bodySmall?.copyWith(
-                              color: Colors.white.withOpacity(0.7),
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              const Icon(
-                                Icons.location_on,
-                                color: Colors.white,
-                                size: 18,
-                              ),
-                              Text(
-                                "24, Mikel Johnson, US",
-                                style: theme.textTheme.bodyMedium?.copyWith(
-                                  color: Colors.white,
-                                ),
-                              ),
-                              const Icon(
-                                Icons.keyboard_arrow_down,
-                                color: Colors.white,
-                                size: 18,
-                              ),
-                            ],
-                          ),
-                        ],
+                    const Text(
+                      "Land",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 168, 198, 168),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Poppins',),
                       ),
                       const Spacer(),
                       IconButton(
@@ -146,56 +123,7 @@ class _HomePageState extends State<HomePage> {
                     child: ListView(
                       padding: const EdgeInsets.all(16),
                       children: [
-                        Container(
-                          height: 120,
-                          decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomLeft,
-                                stops: [0.4, 1],
-                                colors: [
-                                  Color(0xff35573b),
-                                  Colors.grey,
-                                ],
-                              ),
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Text(
-                                        'GET YOUR 10%\nCASHBACK',
-                                        style: theme.textTheme.titleLarge?.copyWith(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Text(
-                                        '*Expires 31 Sept 2024',
-                                        style: theme.textTheme.bodySmall?.copyWith(
-                                          color: Colors.white,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Image.asset(
-                                "assets/house.png",
-                                width: 130,
-                                fit: BoxFit.cover,
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                            ],
-                          ),
-                        ),
+                        
                         const SizedBox(
                           height: 24,
                         ),
