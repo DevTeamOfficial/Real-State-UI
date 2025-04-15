@@ -1,2 +1,0 @@
-C:/Users/Admin/OneDrive/Desktop/git/Real-State-UI-1/android/app/.cxx/Debug/193m65y6/armeabi-v7a/CMakeFiles/edit_cache.dir
-C:/Users/Admin/OneDrive/Desktop/git/Real-State-UI-1/android/app/.cxx/Debug/193m65y6/armeabi-v7a/CMakeFiles/rebuild_cache.dir
