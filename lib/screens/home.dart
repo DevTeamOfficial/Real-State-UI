@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_ui_tutorial/screens/Login.dart';
+import 'package:real_estate_ui_tutorial/screens/onboarding.dart';
 import 'package:real_estate_ui_tutorial/screens/property_page.dart';
 
 import '../widgets/bottom_nav.dart';
@@ -35,9 +37,18 @@ class _HomePageState extends State<HomePage> {
                           color: theme.primaryColor,
                           border: Border.all(color: Colors.white),
                         ),
-                        child: const Icon(
-                          Icons.home_outlined,
-                          color: Colors.white,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => OnboardingPage()),
+                            );
+                          },
+                          child: const Icon(
+                            Icons.home_outlined,
+                            color: Color.fromARGB(255, 252, 250, 250),
+                          ),
                         ),
                       ),
                       const Spacer(),
@@ -79,7 +90,8 @@ class _HomePageState extends State<HomePage> {
                           Icons.notifications_none,
                           color: Colors.white,
                         ),
-                        style: ElevatedButton.styleFrom(backgroundColor: Colors.white.withOpacity(0.4)),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white.withOpacity(0.4)),
                       )
                     ],
                   ),
@@ -128,7 +140,8 @@ class _HomePageState extends State<HomePage> {
                           Icons.filter_list,
                           color: Colors.white,
                         ),
-                        style: ElevatedButton.styleFrom(backgroundColor: Colors.white.withOpacity(0.4)),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white.withOpacity(0.4)),
                       )
                     ],
                   ),
@@ -165,19 +178,23 @@ class _HomePageState extends State<HomePage> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(10.0),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Text(
                                         'GET YOUR 10%\nCASHBACK',
-                                        style: theme.textTheme.titleLarge?.copyWith(
+                                        style: theme.textTheme.titleLarge
+                                            ?.copyWith(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                         ),
                                       ),
                                       Text(
                                         '*Expires 31 Sept 2024',
-                                        style: theme.textTheme.bodySmall?.copyWith(
+                                        style:
+                                            theme.textTheme.bodySmall?.copyWith(
                                           color: Colors.white,
                                         ),
                                       )
@@ -234,7 +251,8 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const PropertyPage(image:  "assets/img1.jpg"),
+                                    builder: (context) => const PropertyPage(
+                                        image: "assets/img1.jpg"),
                                   ),
                                 );
                               },
@@ -271,13 +289,16 @@ class PropertyCard extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20), boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ]),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 10,
+                offset: const Offset(0, 5),
+              ),
+            ]),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -295,8 +316,11 @@ class PropertyCard extends StatelessWidget {
                   top: 10,
                   left: 10,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(color: const Color(0xff48e256), borderRadius: BorderRadius.circular(20)),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                        color: const Color(0xff48e256),
+                        borderRadius: BorderRadius.circular(20)),
                     child: const Text("Active"),
                   ),
                 ),
@@ -331,12 +355,15 @@ class PropertyCard extends StatelessWidget {
                   bottom: 10,
                   right: 10,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration:
-                        BoxDecoration(color: Colors.black.withOpacity(0.4), borderRadius: BorderRadius.circular(20)),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.4),
+                        borderRadius: BorderRadius.circular(20)),
                     child: const Text(
                       "\$250,000",
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -353,7 +380,8 @@ class PropertyCard extends StatelessWidget {
                     children: [
                       Text(
                         "Green Field Island, Western \nByepass",
-                        style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w500, fontSize: 17),
+                        style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w500, fontSize: 17),
                       ),
                       const Icon(Icons.bookmark_outline),
                     ],
@@ -368,7 +396,8 @@ class PropertyCard extends StatelessWidget {
                       ),
                       Text(
                         "Off sixway roundabout, byepass (5.1KM)",
-                        style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey),
+                        style: theme.textTheme.bodyMedium
+                            ?.copyWith(color: Colors.grey),
                       ),
                     ],
                   ),
